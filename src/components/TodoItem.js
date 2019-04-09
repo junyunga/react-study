@@ -2,11 +2,16 @@ import React, { Component } from 'react';
 import './TodoItem.css';
 
 class TodoItem extends Component {
-    render() {
-        const { text, checked, id, onToggole, onRemove } = this.props;
 
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props.checked !== nextProps.checked;
+    }
+
+    render() {
+        const { text, checked, id, onToggle, onRemove } = this.props;
+        
         return (
-            <div className="todo-item" onClick={() => ontoggle(id)}>
+            <div className="todo-item" onClick={() => onToggle(id)}>
                 <div className="remove" onClick={(e) => {
                     e.stopPropagation();
                     onRemove(id)
@@ -16,7 +21,7 @@ class TodoItem extends Component {
                     <div>{text}</div>
                 </div>
                 {
-                    checked && (<div className="check-mark">체크</div>)
+                    checked && (<div className="check-mark">check</div>)
                 }
             </div>
         )
