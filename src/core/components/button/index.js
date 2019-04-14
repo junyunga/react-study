@@ -1,10 +1,29 @@
 import React, {Component} from 'react';
+import './index.scss';
 
-class Button extends  Component {
+class Button extends Component {
+    state = {
+        active: ''
+    };
+
+    handleClick = () => {
+        this.setState(
+            (active) => ({
+                active: 'active'
+            })
+        )
+    };
+
     render() {
-        return(
-            <div className="default-button">
-                <button type="button">1</button>
+
+        const {title} = this.props;
+
+        return (
+            <div className="button-container">
+                <button type="button" className={`default-button`}
+                        onClick={this.handleClick}>
+                    {title}
+                </button>
             </div>
         )
     }

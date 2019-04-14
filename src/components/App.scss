@@ -19,13 +19,14 @@
 
     .content-left {
       display: flex;
-      flex: 2 0 auto;
+      flex: 1 0 auto;
       flex-direction: column;
       height: 100%;
     }
+
     .content-right {
       display: flex;
-      flex: 8 0 auto;
+      flex: 9 0 auto;
       flex-direction: column;
       height: 100%;
     }
