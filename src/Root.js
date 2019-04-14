@@ -1,10 +1,13 @@
 import React from 'react';
+import {BrowserRouter} from "react-router-dom";
 import './root.scss';
 import App from './components/App';
 
 
-const Root = () => {
-    return <App />;
-}
+const Root = () => (
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
+);
 
 export default Root;
