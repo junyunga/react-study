@@ -1,3 +1,6 @@
+/*
+    VSCode 사용시 path 추적
+*/
 {
     "compilerOptions": {
         "baseUrl": ".",
