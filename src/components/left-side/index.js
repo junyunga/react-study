@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Button from 'core/components/button';
 
 class LeftSide extends Component  {
     render() {
