@@ -1,4 +1,5 @@
 import React from 'react';
+import './root.scss';
 import App from './components/App';
 
 
