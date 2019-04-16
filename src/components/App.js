@@ -11,6 +11,7 @@ class App extends Component {
                 <Switch>
                     <Route exact path="/" component={ChooseMenu}/>
                     <Route path="/product" component={Layout}/>
+                    <Route path="/workOrder" component={ChooseMenu}/>
                 </Switch>
             </div>
 
