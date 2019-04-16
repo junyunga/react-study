@@ -26,7 +26,7 @@ class LeftSide extends Component {
             },
             {
                 title: '자재투입',
-                route: 'input'
+                route: 'material-insert'
             }
         ];
 
