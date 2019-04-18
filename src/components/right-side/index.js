@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './index.scss';
 import {Route, Switch} from 'react-router-dom';
 import MaterialInsert from 'components/material-insert';
 
