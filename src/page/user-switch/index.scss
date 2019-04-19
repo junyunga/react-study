@@ -1,0 +1,17 @@
+@import 'src/core/scss/index.scss';
+
+.user-switch-wrapper {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  .user-switch {
+    width: 1280px;
+    height: 800px;
+    border: 1px solid red;
+
+  }
+}

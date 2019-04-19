@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import './index.scss';
 import {NavLink} from 'react-router-dom';
+import './index.scss';
 import Button from 'core/components/button';
 
 class LeftSide extends Component {
@@ -8,7 +8,7 @@ class LeftSide extends Component {
         const activeStyle = {
             color: 'red',
             backgroundColor: 'blue'
-        }
+        };
 
 
         /**
@@ -26,17 +26,35 @@ class LeftSide extends Component {
             },
             {
                 title: '자재투입',
-                route: 'material-insert'
+                route: 'product/material-insert'
             }
         ];
 
+        const userSwitch = () => {
+            return (
+                <div class={'navigation-button-wrapper'}>
+                    <NavLink to={'user-switch'} className={'navigation-button-content'}>
+                        <div class={'navigation-button user'}>
+                            사용자 전환
+                        </div>
+                    </NavLink>
+                </div>
+            );
+        };
+
         const button = MenuList.map((value, index) => {
-            console.log(value)
-            return <NavLink to={`${value.route}`} key={value.title}>{value.title}</NavLink>;
-        })
+            return (
+                <div className="navigation-button-wrapper">
+                    <NavLink to={`${value.route}`} key={value.title} className="navigation-button-content">
+                        <div class={'navigation-button'}>{value.title}</div>
+                    </NavLink>
+                </div>
+            );
+        });
 
         return (
             <div className="left-side">
+                {userSwitch()}
                 {button}
             </div>
         )
