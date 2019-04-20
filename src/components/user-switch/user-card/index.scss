@@ -1,4 +1,43 @@
-.user-card {
-  height: 64px;
+@import "core/scss/index.scss";
+
+
+.user-card-container {
+  height: 100px;
   padding: 16px;
+
+  .user-card-content {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    height: 100%;
+    @include button-card;
+    justify-content: center;
+    align-items: center;
+
+    .user-image-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 2;
+
+      .user-image {
+        border: 1px solid $basic-border;
+        background-color: #d6d6d6;
+        width: 76px;
+        height: 76px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+      }
+    }
+
+    .user-info-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 4;
+    }
+
+  }
+
 }

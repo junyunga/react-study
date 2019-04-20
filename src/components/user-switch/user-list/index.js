@@ -19,6 +19,18 @@ class UserList extends Component {
                 <div className="user-card-wrapper">
                     <UserCard/>
                 </div>
+                <div className="user-card-wrapper">
+                    <UserCard/>
+                </div>
+                <div className="user-card-wrapper">
+                    <UserCard/>
+                </div>
+                <div className="user-card-wrapper">
+                    <UserCard/>
+                </div>
+                <div className="user-card-wrapper">
+                    <UserCard/>
+                </div>
 
             </div>
         );
