@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
 import './index.scss';
-import Button from 'core/components/button';
 
 class LeftSide extends Component {
     render() {
         const activeStyle = {
-            color: 'red',
-            backgroundColor: 'blue'
+            color: '#fff',
+            backgroundColor: '#1B4C74'
         };
 
 
@@ -33,7 +32,9 @@ class LeftSide extends Component {
         const userSwitch = () => {
             return (
                 <div className="navigation-button-wrapper">
-                    <NavLink to={'/user-switch'} className="navigation-button-content">
+                    <NavLink to={'/user-switch'}
+                             className="navigation-button-content"
+                             activeStyle={activeStyle}>
                         <div className="navigation-button user">
                             사용자 전환
                         </div>
@@ -45,7 +46,9 @@ class LeftSide extends Component {
         const button = MenuList.map((value, index) => {
             return (
                 <div className="navigation-button-wrapper" key={index}>
-                    <NavLink to={`${value.route}`}  className="navigation-button-content">
+                    <NavLink to={`${value.route}`}
+                             className="navigation-button-content"
+                             activeStyle={activeStyle}>
                         <div className="navigation-button" >{value.title}</div>
                     </NavLink>
                 </div>
