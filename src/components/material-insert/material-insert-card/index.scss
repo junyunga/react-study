@@ -1,0 +1,78 @@
+@import 'core/scss/index.scss';
+
+.material-insert-card {
+  flex: 0 0 33%;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $default-border;
+  box-sizing: border-box;
+
+  &.available:hover {
+    cursor: pointer;
+  }
+
+  & + & {
+    margin-left: 8px;
+  }
+
+  .insert-card-header {
+    flex: 0 0 58px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: $accent-default-color;
+    border-bottom: 1px solid $default-border;
+
+    .header-title {
+      flex: 1 1 auto;
+      padding: 16px;
+    }
+
+    .return-button-wrapper {
+      flex: 0 0 30%;
+      min-width: 48px;
+      height: 100%;
+
+      .return-button {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: $danger-color;
+        color: $basic-color;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .insert-card-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+
+    .content-row {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+
+      .property {
+        flex: 1 1 40%;
+        color: $secondary-text-color;
+        font-size: 16px;
+      }
+
+      .value {
+        flex: 1 1 60%;
+        color: $basic-black;
+        font-size: 20px;
+      }
+    }
+  }
+}

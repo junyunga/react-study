@@ -1,4 +1,4 @@
-@import 'src/core/scss/index.scss';
+@import 'core/scss/index.scss';
 
 .material-insert {
   width: 100%;
@@ -116,71 +116,5 @@
     width: 24px;
     margin: 16px 8px;
     opacity: 0.36;
-  }
-}
-
-.lts-switch {
-  height: 48px;
-  line-height: 48px;
-  margin-right: 16px;
-
-  /deep/
-  .el-switch__core {
-    width: 140px !important;
-    height: 48px;
-    border-radius: 24px;
-
-    &:after {
-      width: 33px;
-      height: 33px;
-      top: 6px;
-      left: 6px;
-    }
-
-  }
-
-  &.is-checked {
-    /deep/
-    .el-switch__core {
-      border-color: #607fd7;
-      background-color: #607fd7;
-      position: relative;
-
-      &:after {
-        margin-left: -40px !important;
-        right: 6px;
-        left: auto;
-      }
-    }
-  }
-
-  /deep/
-  .el-switch__label {
-    height: 48px;
-    font-weight: 700;
-
-    span {
-      line-height: inherit;
-      font-size: 20px;
-    }
-
-    &.is-active {
-      color: #ffffff;
-      position: absolute;
-      z-index: 1;
-
-      &.el-switch__label--left {
-        margin-right: 14px;
-        right: 0;
-      }
-
-      &.el-switch__label--right {
-        margin-left: 14px;
-      }
-    }
-
-    &:not(.is-active) {
-      display: none;
-    }
   }
 }

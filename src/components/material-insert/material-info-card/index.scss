@@ -1,4 +1,4 @@
-@import 'src/core/scss/index.scss';
+@import 'core/scss/index.scss';
 
 .material-info-card {
   flex: 0 0 20%;
@@ -10,6 +10,7 @@
 
   .material-info-card-header {
     flex: 0 0 40%;
+    border-bottom: 1px solid $default-border;
     background-color: $accent-default-color;
     color: $primary-text-color;
     font-weight: bold;
@@ -28,5 +29,11 @@
 
   & + & {
     margin-top: 12px;
+  }
+
+  &.available {
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
