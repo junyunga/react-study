@@ -1,0 +1,32 @@
+@import 'src/core/scss/index.scss';
+
+.material-info-card {
+  flex: 0 0 20%;
+  max-height: 80px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $default-border;
+  border-radius: $default-border-radius;
+
+  .material-info-card-header {
+    flex: 0 0 40%;
+    background-color: $accent-default-color;
+    color: $primary-text-color;
+    font-weight: bold;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 8px;
+  }
+
+  .material-info-card-content {
+    flex: 1 1 auto;
+    color: $basic-black;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 8px;
+  }
+
+  & + & {
+    margin-top: 12px;
+  }
+}
