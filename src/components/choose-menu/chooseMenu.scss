@@ -1,3 +1,5 @@
+@import 'src/core/scss/index.scss';
+
 .choose-menu {
   flex: 1 1 auto;
   display: flex;
@@ -25,8 +27,8 @@
 
       .department-card {
         flex: 0 1 25%;
-        border: 1px solid #adb5bd;
-        border-radius: 4px;
+        border: 1px solid $basic-border;
+        border-radius: $default-border-radius;
 
         &:first-child {
           margin-right: 20px;
@@ -40,7 +42,7 @@
           align-items: center;
           text-decoration: none;
           font-size: 28px;
-          color: #343a40;
+          color: $basic-black;
 
           &:hover {
             color: #3b5bdb;

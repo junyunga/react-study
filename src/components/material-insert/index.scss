@@ -1,10 +1,11 @@
-@import '../../core/scss/theme.scss';
+@import 'src/core/scss/index.scss';
 
 .material-insert {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: row;
+  color: $basic-black;
 
   .base-info {
     flex: 1 1 40%;
@@ -12,8 +13,9 @@
     flex-direction: column;
     padding: 16px;
 
-    .content {
-      border: 1px solid #e5e5e5;
+    .base-content {
+      border: 1px solid $basic-border;
+      border-radius: $default-border-radius;
       padding: 16px;
     }
   }
@@ -32,7 +34,7 @@
     }
   }
 
-  .header {
+  .base-header, .available-header, .inserted-header {
     flex: 0 0 58px;
     box-sizing: border-box;
     display: flex;
@@ -48,7 +50,7 @@
     }
   }
 
-  .content {
+  .base-content, .available-content, .inserted-content {
     flex: 1 1 auto;
     display: flex;
     box-sizing: border-box;
