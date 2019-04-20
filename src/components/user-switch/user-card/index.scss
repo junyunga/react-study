@@ -13,6 +13,8 @@
     @include button-card;
     justify-content: center;
     align-items: center;
+    border-left: 4px solid #dd4c39;
+
 
     .user-image-wrapper {
       display: flex;
@@ -33,9 +35,12 @@
 
     .user-info-wrapper {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      align-items: start;
       flex: 4;
+
+      .user-info {
+        padding-left: 16px;
+      }
     }
 
   }
