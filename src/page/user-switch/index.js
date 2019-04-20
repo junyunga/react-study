@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './index.scss';
 import UserGroup from 'components/user-switch/user-group/';
+import UserList from 'components/user-switch/user-list/';
 
 
 class UserSwitch extends Component {
@@ -14,9 +15,8 @@ class UserSwitch extends Component {
                                 <UserGroup/>
                             </div>
                             <div className="user-switch-content-list---wrapper">
-
+                                <UserList/>
                             </div>
-
                         </div>
                         <div className="user-switch-password--wrapper">
 
