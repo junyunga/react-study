@@ -33,7 +33,7 @@ class LeftSide extends Component {
         const userSwitch = () => {
             return (
                 <div className="navigation-button-wrapper">
-                    <NavLink to={'user-switch'} className="navigation-button-content">
+                    <NavLink to={'/user-switch'} className="navigation-button-content">
                         <div className="navigation-button user">
                             사용자 전환
                         </div>
