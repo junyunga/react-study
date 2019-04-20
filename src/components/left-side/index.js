@@ -32,9 +32,9 @@ class LeftSide extends Component {
 
         const userSwitch = () => {
             return (
-                <div class={'navigation-button-wrapper'}>
-                    <NavLink to={'user-switch'} className={'navigation-button-content'}>
-                        <div class={'navigation-button user'}>
+                <div className="navigation-button-wrapper">
+                    <NavLink to={'user-switch'} className="navigation-button-content">
+                        <div className="navigation-button user">
                             사용자 전환
                         </div>
                     </NavLink>
@@ -44,9 +44,9 @@ class LeftSide extends Component {
 
         const button = MenuList.map((value, index) => {
             return (
-                <div className="navigation-button-wrapper">
-                    <NavLink to={`${value.route}`} key={value.title} className="navigation-button-content">
-                        <div class={'navigation-button'}>{value.title}</div>
+                <div className="navigation-button-wrapper" key={index}>
+                    <NavLink to={`${value.route}`}  className="navigation-button-content">
+                        <div className="navigation-button" >{value.title}</div>
                     </NavLink>
                 </div>
             );
