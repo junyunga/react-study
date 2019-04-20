@@ -7,13 +7,13 @@
   flex-direction: column;
   flex: 1 1 auto;
 
-  .header {
+  &.header {
     min-height: 123px;
     max-height: 123px;
     border-bottom: 1px solid $default-border;
   }
 
-  .content {
+  &.content {
     display: flex;
     flex-direction: row;
     flex: 1 1 auto;

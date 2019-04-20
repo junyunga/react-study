@@ -8,10 +8,10 @@ class Layout extends Component {
     render() {
         return (
             <div className="layout-container">
-                <Header />
-                <div className="content">
-                    <LeftSide/>
-                    <RightSide/>
+                <Header className="layout-container"/>
+                <div className="layout-container content">
+                    <LeftSide className="content"/>
+                    <RightSide className="content"/>
                 </div>
 
             </div>
