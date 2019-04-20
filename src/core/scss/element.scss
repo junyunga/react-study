@@ -1,6 +1,5 @@
 $basic-color: #fff;
 $basic-black: #343a40;
-$basic-border: #d6d6d6;
 $primary-color: #607fd7;
 
 /**
@@ -10,4 +9,27 @@ $default-button-bg: #222222;
 $default-hover-bg: rgba(0, 0, 0, .05);
 $default-button-color: #dd4c39;
 
+$default-border: #d6d6d6;
 $default-border-radius: 8px;
+
+$default-color: #ffffff;
+$accent-default-color: darken($default-color, 7%);
+$accent-default-color2: darken($default-color, 14%);
+
+$primary-color: #607fd7;
+$accent-primary-color: darken($primary-color, 7%);
+$accent-primary-color2: darken($primary-color, 14%);
+
+$active-color: #4EA8F4;
+$accent-active-color: darken($active-color, 7%);
+$accent-active-color2: darken($active-color, 14%);
+
+$danger-color: #FF5D5D;
+$accent-danger-color: darken($danger-color, 7%);
+$accent-danger-color2: darken($danger-color, 14%);
+
+
+$primary-text-color: #303133;
+$regular-text-color: #606266;
+$secondary-text-color: #909399;
+$placeholder-text-color: #c0c4cc;

@@ -10,7 +10,7 @@
   .header {
     min-height: 123px;
     max-height: 123px;
-    border-bottom: 1px solid $basic-border;
+    border-bottom: 1px solid $default-border;
   }
 
   .content {
@@ -24,7 +24,7 @@
       display: flex;
       flex: 0 0 200px;
       flex-direction: column;
-      border-right: 1px solid $basic-border;
+      border-right: 1px solid $default-border;
     }
 
     .right-side {
