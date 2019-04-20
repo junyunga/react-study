@@ -18,15 +18,15 @@ class LeftSide extends Component {
         const MenuList = [
             {
                 title: '작업지시',
-                route: 'workOrder'
+                route: '/product/workOrder'
             },
             {
                 title: '작업현황',
-                route: 'workList'
+                route: '/product/workList'
             },
             {
                 title: '자재투입',
-                route: 'product/material-insert'
+                route: '/product/material-insert'
             }
         ];
 
