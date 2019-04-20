@@ -15,6 +15,10 @@
     align-items: center;
     border-left: 4px solid #dd4c39;
 
+    &.active {
+      background-color: #222222;
+      color: $default-button-color;
+    }
 
     .user-image-wrapper {
       display: flex;
@@ -35,7 +39,6 @@
 
     .user-info-wrapper {
       display: flex;
-      align-items: start;
       flex: 4;
 
       .user-info {

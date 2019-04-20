@@ -2,10 +2,16 @@ import React, {Component} from 'react';
 import './index.scss';
 
 class UserCard extends Component {
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+        return this.props.active !== nextProps.active;
+    }
+
     render() {
+        const {id, name, active, onClick} = this.props;
+
         return (
-            <div className="user-card-container">
-                <div className="user-card-content">
+            <div className="user-card-container" onClick={() => onClick(id)}>
+                <div className={`user-card-content ${active ? 'active' : ''}`}>
                     <div className="user-image-wrapper">
                         <div className="user-image">
 
@@ -13,7 +19,7 @@ class UserCard extends Component {
                     </div>
                     <div className="user-info-wrapper">
                         <div className="user-info">
-                            개발팀
+                            {name}
                         </div>
                     </div>
                 </div>

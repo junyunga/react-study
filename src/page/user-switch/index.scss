@@ -32,8 +32,18 @@
       }
 
       .user-switch-password--wrapper {
+        display: flex;
+        flex-direction: column;
         flex: 2;
         height: 100%;
+
+        .user-switch-password-display--wrapper {
+          flex: 3;
+        }
+
+        .user-switch-password-keypad--wrapper {
+          flex: 7;
+        }
       }
     }
   }

@@ -4,34 +4,24 @@ import UserCard from '../user-card/';
 
 
 class UserList extends Component {
+
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+        return this.props.userList !== nextProps;
+    }
+
     render() {
+
+        const {userList, onClick} = this.props;
+        const list = userList.map(item => {
+            return (
+                <div className="user-card-wrapper" key={item.id}>
+                    <UserCard id={item.id} name={item.name} active={item.active} onClick={onClick}/>
+                </div>
+            );
+        });
         return (
             <div className="user-list">
-                <div className="user-card-wrapper">
-                    <UserCard/>
-                </div>
-                <div className="user-card-wrapper">
-                    <UserCard/>
-                </div>
-                <div className="user-card-wrapper">
-                    <UserCard/>
-                </div>
-                <div className="user-card-wrapper">
-                    <UserCard/>
-                </div>
-                <div className="user-card-wrapper">
-                    <UserCard/>
-                </div>
-                <div className="user-card-wrapper">
-                    <UserCard/>
-                </div>
-                <div className="user-card-wrapper">
-                    <UserCard/>
-                </div>
-                <div className="user-card-wrapper">
-                    <UserCard/>
-                </div>
-
+                {list}
             </div>
         );
     }
