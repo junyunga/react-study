@@ -17,11 +17,11 @@ class LeftSide extends Component {
         const MenuList = [
             {
                 title: '작업지시',
-                route: '/product/workOrder'
+                route: '/product/work-order'
             },
             {
                 title: '작업현황',
-                route: '/product/workList'
+                route: '/product/work-list'
             },
             {
                 title: '자재투입',

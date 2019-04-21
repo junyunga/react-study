@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import MaterialInfoCard from './material-info-card';
 import MaterialInsertCard from './material-insert-card';
+import Slide from 'core/components/slide/';
 import './index.scss';
 
 class MaterialInsert extends Component {
@@ -76,7 +77,9 @@ class MaterialInsert extends Component {
                             투입 가능 자재 현황
                         </div>
                         <div className="available-content row">
-                            {availableCards}
+                            <Slide>
+                                {availableCards}
+                            </Slide>
                         </div>
                     </div>
                     <div className="inserted-list">
