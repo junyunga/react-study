@@ -120,10 +120,20 @@ class UserSwitch extends Component {
 
     handlePasswordClick = (value) => {
         const {keypadActive} = this.state;
-
+        console.log(this.props)
         if (keypadActive) {
+            switch (value) {
+                case 'login':
+                    
+                    this.nextPath('/product');
+            }
+
         }
 
+    };
+
+    nextPath = path => {
+        return this.props.history.push(path)
     };
 
     render() {

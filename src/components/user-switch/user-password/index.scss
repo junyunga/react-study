@@ -44,7 +44,7 @@
       .password {
         width: 96px;
         height: 96px;
-        border: 0;
+        border: 1px solid #dd4c39;
         &:not(:first-child) {
           margin-left: 24px;
         }
