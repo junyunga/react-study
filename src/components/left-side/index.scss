@@ -1,33 +1,35 @@
 @import 'src/core/scss/index.scss';
 
 .left-side {
+  background: linear-gradient(to bottom, #263238 70%, darken(#263238, 7%) 100%);
   .navigation-button-wrapper {
     width: 100%;
     height: 64px;
+
     .navigation-button-content {
       display: flex;
       flex-direction: row;
-      justify-content: center;
       align-items: center;
       flex: 0 0 auto;
       height: 100%;
+      padding: 0 16px;
 
-      &:link {
+      &:link, &:visited, &:hover {
         text-decoration: none;
-        color: #000;
+        color: $basic-color;
       }
 
-      &:visited {
-        text-decoration: none;
-        color: #000;
+      &.user {
+        background-color: #354046;
       }
 
-      &:hover {
-        text-decoration: none;
-        color: #000;
+      .material-icons {
+        margin-right: 16px;
       }
 
       .navigation-button {
+        display: flex;
+        align-items: center;
       }
     }
   }

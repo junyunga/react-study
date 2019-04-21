@@ -17,31 +17,20 @@ class LeftSide extends Component {
         const MenuList = [
             {
                 title: '작업지시',
+                icon: 'chrome_reader_mode',
                 route: '/product/work-order'
             },
             {
                 title: '작업현황',
+                icon: 'dashboard',
                 route: '/product/work-list'
             },
             {
                 title: '자재투입',
+                icon: 'input',
                 route: '/product/material-insert'
             }
         ];
-
-        const userSwitch = () => {
-            return (
-                <div className="navigation-button-wrapper">
-                    <NavLink to={'/user-switch'}
-                             className="navigation-button-content"
-                             activeStyle={activeStyle}>
-                        <div className="navigation-button user">
-                            사용자 전환
-                        </div>
-                    </NavLink>
-                </div>
-            );
-        };
 
         const button = MenuList.map((value, index) => {
             return (
@@ -49,7 +38,9 @@ class LeftSide extends Component {
                     <NavLink to={`${value.route}`}
                              className="navigation-button-content"
                              activeStyle={activeStyle}>
-                        <div className="navigation-button" >{value.title}</div>
+                        <div className="navigation-button">
+                            <i className="material-icons">{value.icon}</i>{value.title}
+                        </div>
                     </NavLink>
                 </div>
             );
@@ -57,7 +48,15 @@ class LeftSide extends Component {
 
         return (
             <div className="left-side">
-                {userSwitch()}
+                <div className="navigation-button-wrapper">
+                    <NavLink to={'/user-switch'}
+                             className="navigation-button-content user"
+                             activeStyle={activeStyle}>
+                        <div className="navigation-button user">
+                            사용자 전환
+                        </div>
+                    </NavLink>
+                </div>
                 {button}
             </div>
         )
