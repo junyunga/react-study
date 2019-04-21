@@ -5,7 +5,6 @@ import './index.scss';
 class UserPassword extends Component {
     render() {
         const {passwordDDisplay, title} = this.props;
-        console.log(title)
         const displayState = {
             _ui: ''
         };

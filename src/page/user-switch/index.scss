@@ -10,8 +10,8 @@
   align-items: center;
 
   .user-switch {
-    width: 1280px;
-    height: 800px;
+    width: 70vw;
+    height: 90vh;
 
     .user-switch--container {
       display: flex;
@@ -29,6 +29,8 @@
         }
         .user-switch-content-list---wrapper {
           padding: 16px;
+          height: 60vh;
+          overflow-y: scroll;
         }
       }
 
