@@ -51,8 +51,45 @@ class UserSwitch extends Component {
                 active: false,
             }
         ],
+        password: [
+            {
+                id: 0,
+                value: ''
+            },
+            {
+                id: 0,
+                value: ''
+            },
+            {
+                id: 0,
+                value: ''
+            },
+            {
+                id: 0,
+                value: ''
+            }
+        ],
+        passwordMask: [
+            {
+                id: 0,
+                value: ''
+            },
+            {
+                id: 0,
+                value: ''
+            },
+            {
+                id: 0,
+                value: ''
+            },
+            {
+                id: 0,
+                value: ''
+            }
+        ],
         passwordDisplay: false,
-        passwordDDisplayTitle: ''
+        passwordDDisplayTitle: '',
+        keypadActive: false,
     };
 
     handleUserCardClick = (id) => {
@@ -76,14 +113,24 @@ class UserSwitch extends Component {
         this.setState({
             userList: changeState,
             passwordDDisplay: true,
-            passwordDDisplayTitle: changeState[index]['name']
+            passwordDDisplayTitle: changeState[index]['name'],
+            keypadActive: true
         });
     };
 
+    handlePasswordClick = (value) => {
+        const {keypadActive} = this.state;
+
+        if (keypadActive) {
+        }
+
+    };
+
     render() {
-        const {userList, passwordDDisplay, passwordDDisplayTitle} = this.state;
+        const {userList, passwordDDisplay, passwordDDisplayTitle, keypadActive} = this.state;
         const {
-            handleUserCardClick
+            handleUserCardClick,
+            handlePasswordClick,
         } = this;
 
 
@@ -105,7 +152,7 @@ class UserSwitch extends Component {
                                               title={passwordDDisplayTitle}/>
                             </div>
                             <div className="user-switch-password-keypad--wrapper">
-                                <KeyPad/>
+                                <KeyPad keypadActive={keypadActive} password={handlePasswordClick}/>
                             </div>
 
                         </div>
