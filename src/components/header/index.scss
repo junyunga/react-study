@@ -5,17 +5,45 @@
   flex-direction: row;
 
   .logo-wrapper {
+    position: relative;
     flex: 0 0 200px;
     text-align: center;
     border-right: 1px solid $default-border;
     box-sizing: border-box;
     padding: 8px;
-    font-size: 48px;
-    font-weight: 900;
-    background: url("https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png") no-repeat scroll 50% 50%/50% auto;
+    background-color: rgb(27, 76, 116);
+
+    .logo-title {
+      position: absolute;
+      z-index: 2;
+      color: $basic-color;
+      letter-spacing: 10px;
+      font-size: 48px;
+      font-weight: 900;
+    }
+
+    .logo {
+      position: absolute;
+      z-index: 1;
+      left: 25%;
+      width: 50%;
+      height: auto;
+      animation: logo-spin infinite 20s linear;
+      pointer-events: none;
+      opacity: .6;
+    }
   }
 
   .machine-list-wrapper {
     flex: 1 1 auto;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
