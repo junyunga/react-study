@@ -50,7 +50,9 @@ class UserSwitch extends Component {
                 name: '개발 8팀',
                 active: false,
             }
-        ]
+        ],
+        passwordDisplay: false,
+        passwordDDisplayTitle: ''
     };
 
     handleUserCardClick = (id) => {
@@ -72,12 +74,14 @@ class UserSwitch extends Component {
         };
 
         this.setState({
-            userList: changeState
+            userList: changeState,
+            passwordDDisplay: true,
+            passwordDDisplayTitle: changeState[index]['name']
         });
     };
 
     render() {
-        const {userList} = this.state;
+        const {userList, passwordDDisplay, passwordDDisplayTitle} = this.state;
         const {
             handleUserCardClick
         } = this;
@@ -97,7 +101,8 @@ class UserSwitch extends Component {
                         </div>
                         <div className="user-switch-password--wrapper">
                             <div className="user-switch-password-display--wrapper">
-                                <UserPassword/>
+                                <UserPassword passwordDDisplay={passwordDDisplay ? passwordDDisplay : false}
+                                              title={passwordDDisplayTitle}/>
                             </div>
                             <div className="user-switch-password-keypad--wrapper">
                                 <KeyPad/>

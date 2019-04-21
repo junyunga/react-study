@@ -1,6 +1,7 @@
 @import 'core/scss/index.scss';
 
 .user-switch-wrapper {
+  user-select: none;
   display: flex;
   flex: 1 0 auto;
   flex-direction: column;
