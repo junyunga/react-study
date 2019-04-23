@@ -3,7 +3,6 @@
 .user-password {
   width: 100%;
   height: 100%;
-  background-color: #222222;
 
   .user-password--default-display {
     display: flex;
@@ -12,10 +11,10 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    color: $default-color;
     font: {
       size: 35px;
     }
+    border: 1px solid $default-border;
   }
 
   .user-password--main-display {
