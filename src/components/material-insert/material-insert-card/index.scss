@@ -47,6 +47,10 @@
         &:hover {
           cursor: pointer;
         }
+
+        &:active {
+          background-color: $accent-danger-color;
+        }
       }
     }
   }

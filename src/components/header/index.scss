@@ -32,6 +32,10 @@
       pointer-events: none;
       opacity: .6;
     }
+
+    &:hover {
+      cursor: default;
+    }
   }
 
   .machine-list-wrapper {

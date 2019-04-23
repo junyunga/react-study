@@ -77,7 +77,9 @@ class MaterialInsert extends Component {
                             투입 가능 자재 현황
                         </div>
                         <div className="available-content row">
-                            <Slide>
+                            <Slide pageSize={4}
+                                   direction="horizontal"
+                                   displayData={availableMaterials}>
                                 {availableCards}
                             </Slide>
                         </div>
