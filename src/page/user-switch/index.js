@@ -124,8 +124,10 @@ class UserSwitch extends Component {
         if (keypadActive) {
             switch (value) {
                 case 'login':
-                    
                     this.nextPath('/product');
+                default:
+                    alert(value)
+
             }
 
         }

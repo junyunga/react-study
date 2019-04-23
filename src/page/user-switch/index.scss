@@ -20,13 +20,19 @@
       height: 100%;
       border: 1px solid $default-border;
 
+      @media screen and (max-width: 1000px) {
+        flex-direction: column;
+      }
+
       .user-switch-content--wrapper {
         flex: 2;
         height: 100%;
-        .user-switch-content-group--wrapper{
+
+        .user-switch-content-group--wrapper {
           width: 100%;
           height: 123px;
         }
+
         .user-switch-content-list---wrapper {
           padding: 16px;
         }
