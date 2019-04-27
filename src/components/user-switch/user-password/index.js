@@ -4,34 +4,45 @@ import './index.scss';
 
 class UserPassword extends Component {
     render() {
-        const {passwordDDisplay, title} = this.props;
+        const {passwordDDisplay, title, passwordValue} = this.props;
         const displayState = {
             _ui: ''
         };
         const password = [
             {
                 id: 0,
-                value: ''
+                value: passwordValue[0],
+                mask: 'brightness_high',
+                active: passwordValue.length === 0 ? true : false
             },
             {
                 id: 1,
-                value: ''
+                value: passwordValue[1],
+                mask: 'brightness_high',
+                active: passwordValue.length === 1 ? true : false
             },
             {
                 id: 2,
-                value: ''
+                value: passwordValue[2],
+                mask: 'brightness_high',
+                active: passwordValue.length === 2 ? true : false
             },
             {
                 id: 3,
-                value: ''
+                value: passwordValue[3],
+                mask: 'brightness_high',
+                active: passwordValue.length === 3 ? true : false
+
             }
         ];
 
         const passwordContent = password.map((value) => {
             return (
-                <input type="text" className="password" key={value.id} readOnly/>
+                <div className={`password ${value.active ? 'border-active' : ''}`} key={value.id}>
+                    <i className="material-icons">{value.value ? value.mask : ''}</i></div>
             );
         });
+
 
         if (passwordDDisplay) {
             displayState._ui = <div className="user-password--main-display">

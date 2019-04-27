@@ -51,42 +51,7 @@ class UserSwitch extends Component {
                 active: false,
             }
         ],
-        password: [
-            {
-                id: 0,
-                value: ''
-            },
-            {
-                id: 0,
-                value: ''
-            },
-            {
-                id: 0,
-                value: ''
-            },
-            {
-                id: 0,
-                value: ''
-            }
-        ],
-        passwordMask: [
-            {
-                id: 0,
-                value: ''
-            },
-            {
-                id: 0,
-                value: ''
-            },
-            {
-                id: 0,
-                value: ''
-            },
-            {
-                id: 0,
-                value: ''
-            }
-        ],
+        password: [],
         passwordDisplay: false,
         passwordDDisplayTitle: '',
         keypadActive: false,
@@ -119,17 +84,23 @@ class UserSwitch extends Component {
     };
 
     handlePasswordClick = (value) => {
-        const {keypadActive} = this.state;
-        console.log(this.props)
+        const {keypadActive, password} = this.state;
+
         if (keypadActive) {
             switch (value) {
                 case 'login':
                     this.nextPath('/product');
+                    break;
                 default:
-                    alert(value)
+
+                    if (password.length < 4) {
+                        password.push(value);
+                    }
 
             }
-
+            this.setState({
+                password: password
+            })
         }
 
     };
@@ -139,12 +110,11 @@ class UserSwitch extends Component {
     };
 
     render() {
-        const {userList, passwordDDisplay, passwordDDisplayTitle, keypadActive} = this.state;
+        const {userList, passwordDDisplay, passwordDDisplayTitle, keypadActive, password} = this.state;
         const {
             handleUserCardClick,
             handlePasswordClick,
         } = this;
-
 
         return (
             <div className="user-switch-wrapper">
@@ -161,10 +131,12 @@ class UserSwitch extends Component {
                         <div className="user-switch-password--wrapper">
                             <div className="user-switch-password-display--wrapper">
                                 <UserPassword passwordDDisplay={passwordDDisplay ? passwordDDisplay : false}
+                                              passwordValue={password}
                                               title={passwordDDisplayTitle}/>
                             </div>
                             <div className="user-switch-password-keypad--wrapper">
-                                <KeyPad keypadActive={keypadActive} password={handlePasswordClick}/>
+                                <KeyPad keypadActive={keypadActive}
+                                        password={handlePasswordClick}/>
                             </div>
 
                         </div>
