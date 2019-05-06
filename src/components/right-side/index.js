@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './index.scss';
 import {Route, Switch} from 'react-router-dom';
 import MaterialInsert from 'components/material-insert';
+import WorkList from 'page/product/work-list';
 
 class RightSide extends Component  {
     render() {
@@ -9,6 +10,7 @@ class RightSide extends Component  {
             <div className="right-side">
                 <Switch>
                     <Route path="/product/material-insert" component={MaterialInsert}/>
+                    <Route path="/product/work-list" component={WorkList}/>
                 </Switch>
             </div>
         )

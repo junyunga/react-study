@@ -1,0 +1,15 @@
+.material {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .material-container {
+    flex: 1 1 auto;
+    padding: 8px;
+    .material-content {
+      border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+}

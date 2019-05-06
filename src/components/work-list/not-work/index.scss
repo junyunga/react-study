@@ -1,0 +1,15 @@
+.not-work {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .not-work-container {
+    flex: 1 1 auto;
+    padding: 8px;
+    .not-work-content {
+      border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+}

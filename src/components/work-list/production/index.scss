@@ -1,0 +1,15 @@
+.production {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .production-container {
+    flex: 1 1 auto;
+    padding: 8px;
+    .production-content {
+      border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+}
