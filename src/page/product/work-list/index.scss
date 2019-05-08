@@ -3,9 +3,10 @@
   flex-flow: row wrap;
   height: 100%;
   padding: 8px;
-
-  .wrapper {
+  .card-wrapper {
+    display: flex;
+    flex-direction: column;
     flex: 1 1 33.3333%;
-    height: 50%;
+    max-height: 100%;
   }
 }
