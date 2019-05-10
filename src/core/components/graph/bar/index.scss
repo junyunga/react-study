@@ -1,0 +1,48 @@
+.bar-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  height: 100%;
+  .bar-content {
+    flex: 1 0 auto;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    .bar-content__outer {
+      height: 24px;
+      background-color: #ebeef5;
+      position: relative;
+      vertical-align: middle;
+      overflow: hidden;
+      .bar-content__inner {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: rgb(255, 179, 165);
+        height: 100%;
+        text-align: right;
+        line-height: 1;
+        animation: skills 2s cubic-bezier(0.17, 0.67, 0, 1);
+
+        @keyframes skills {
+          0% {
+            left: -500px;
+            opacity: 0;
+          }
+          100% {
+            left: 0;
+            opacity: 1;
+          }
+        }
+
+        .bar-content__innerText {
+          position: absolute;
+          display: inline-block;
+          vertical-align: middle;
+          top: 3px;
+          right: -15px;
+        }
+      }
+    }
+  }
+}
