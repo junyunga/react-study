@@ -4,10 +4,25 @@
   flex-direction: column;
   height: 100%;
   .bar-content {
-    flex: 1 0 auto;
+    position: relative;
+    flex: 0 0 auto;
     height: 100%;
     display: inline-block;
     vertical-align: middle;
+    .bar-head__wrapper {
+      position: absolute;
+      height: 10px;
+      top: -10px;
+      z-index: 1;
+      .bar-head {
+        width: 10px;
+        height: 10px;
+        background-color: red;
+        position: absolute;
+        right: -6px;
+        border-radius: 50%;
+      }
+    }
     .bar-content__outer {
       height: 24px;
       background-color: #ebeef5;
@@ -39,9 +54,14 @@
           position: absolute;
           display: inline-block;
           vertical-align: middle;
-          top: 3px;
+          top: 5px;
           right: -15px;
         }
+      }
+      .bar-content__innerBar {
+        position: absolute;
+        border-right: 2px solid red;
+        height: 100%;
       }
     }
   }

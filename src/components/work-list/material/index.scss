@@ -20,6 +20,14 @@
           font-size: 24px;
           font-weight: bold;
         }
+        .header__legend {
+          &::after {
+            content: ' ';
+            width: 1px;
+            margin-left: 10px;
+            border: 2px solid red;
+          }
+        }
       }
       .material-content__body {
         padding: 16px 0 16px 16px;

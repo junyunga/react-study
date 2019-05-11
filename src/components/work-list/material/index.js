@@ -8,19 +8,23 @@ export default class Material extends Component {
         const barData = [{
             index: 0,
             bg: '#ffb3a5',
-            data: '50%'
+            data: '50%',
+            safety_stock: '20%'
         }, {
             index: 1,
             bg: '#a3b8d5',
-            data: '80%'
+            data: '80%',
+            safety_stock: '50%'
         }, {
             index: 2,
             bg: '#ffb3a5',
-            data: '70%'
+            data: '70%',
+            safety_stock: '40%'
         }, {
             index: 3,
             bg: '#a3b8d5',
-            data: '30%'
+            data: '30%',
+            safety_stock: '30%'
         }];
         return (
             <div className="material">
