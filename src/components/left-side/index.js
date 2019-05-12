@@ -29,6 +29,11 @@ class LeftSide extends Component {
                 title: '자재투입',
                 icon: 'input',
                 route: '/product/material-insert'
+            },
+            {
+                title: '테스트',
+                icon: 'dashboard',
+                route: '/product/dev-page'
             }
         ];
 
