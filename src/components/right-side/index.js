@@ -3,7 +3,8 @@ import './index.scss';
 import { Route, Switch } from 'react-router-dom';
 import MaterialInsert from 'components/material-insert';
 // import WorkList from 'page/product/work-list';
-import { WorkList, DevPage } from 'page/index.async.js';
+import { WorkList } from 'page/index.async.js';
+import DevPage from 'page/dev-page'
 class RightSide extends Component {
     render() {
         return (
